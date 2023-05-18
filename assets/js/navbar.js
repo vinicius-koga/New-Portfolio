@@ -133,9 +133,7 @@ function closeMobileMenu() {
 
 document.addEventListener('click', (e) => {
     if(!mobileMenu.classList.contains('closed') && e.target !== mobileMenuBtn) {
-        if(!e.target.classList.contains('mbm')) {
-            closeMobileMenu();
-        }
+        closeMobileMenu();
     }
 })
 
