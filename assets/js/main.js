@@ -7,6 +7,7 @@ const contatoBtn = document.querySelector('.header .contatoBtn');
 const logo = document.querySelector('.header .header-logo');
 const body = document.querySelector('body');
 const header = document.querySelector('.header');
+const headerLogo = document.querySelector('.header-logo');
 const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
 const mobileMenu = document.querySelector('.mobile-menu');
 
@@ -136,6 +137,10 @@ document.addEventListener('click', (e) => {
             closeMobileMenu();
         }
     }
+})
+
+headerLogo.addEventListener('click', () => {
+    window.scrollTo(0, 0)
 })
 
 const ObserveHome = new IntersectionObserver(entries => {
