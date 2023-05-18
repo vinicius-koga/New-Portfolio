@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VK | Portfólio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <div class="header-col-side">
+                <img src="./assets/img/logo-02.svg" class="header-logo">
+                <a href="#"><button class="header-btn left" style="display: none;"><i class="fa-solid fa-angles-left"></i></button></a>
+            </div>
+            <nav class="header-col-center">
+                <ul>
+                    <li> <a href="#" class="active homeBtn">Home</a> </li>
+                    <li> <a href="#" class="conhecimentosBtn">Conhecimentos</a> </li>
+                    <li> <a href="#" class="projetosBtn">Projetos</a> </li>
+                    <li> <a href="#" class="contatoBtn">Contato</a> </li>
+                </ul>
+            </nav>
+            <div class="header-col-side">
+                <a href="#"><button class="header-btn right"><i class="fa-solid fa-angles-right"></i></button></a>
+                <i class="fa-solid fa-square-caret-down mobile-menu-btn"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu closed mbm">
+        <nav class="mbm">
+            <ul class="mbm">
+                <a href="#home"><li class="active mbm">Home</li></a>
+                <a href="#conhecimentos"><li class="mbm">Conhecimentos</li></a>
+                <a href="#projetos"><li class="mbm">Projetos</li></a>
+                <a href="#contato"><li class="mbm">Contato</li></a>
+            </ul>
+        </nav>
+    </div>
+    
+    <section class="home" id="home">
+        <div class="intersectionBar iHome"></div>
+    </section>
+
+    <section class="conhecimentos" id="conhecimentos">
+        <div class="intersectionBar iConhecimentos"></div>
+    </section>
+
+    <section class="projetos" id="projetos">
+        <div class="intersectionBar iProjetos"></div>
+    </section>
+
+    <section class="contato" id="contato">
+        <div class="intersectionBar iContato"></div>
+    </section>
+
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
