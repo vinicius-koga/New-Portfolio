@@ -13,11 +13,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+    <!-- HEADER -->
     <header class="header">
         <div class="container header-container">
             <div class="header-col-side">
                 <img src="./assets/img/logo-02.svg" class="header-logo">
-                <a href="#"><button class="header-btn left" style="display: none;"><i class="fa-solid fa-angles-left"></i></button></a>
+                <a href="#"><button class="arrow-btn left" style="display: none;"><i class="fa-solid fa-angles-left"></i></button></a>
             </div>
             <nav class="header-col-center">
                 <ul>
@@ -28,12 +29,13 @@
                 </ul>
             </nav>
             <div class="header-col-side">
-                <a href="#"><button class="header-btn right"><i class="fa-solid fa-angles-right"></i></button></a>
+                <a href="#"><button class="arrow-btn right"><i class="fa-solid fa-angles-right"></i></button></a>
                 <i class="fa-solid fa-square-caret-down mobile-menu-btn"></i>
             </div>
         </div>
     </header>
 
+    <!-- MOBILE NAVBAR -->
     <div class="mobile-menu closed">
         <nav>
             <ul >
@@ -45,18 +47,30 @@
         </nav>
     </div>
     
+    <!-- HOME -->
     <section class="home" id="home">
         <div class="intersectionBar iHome"></div>
+        <div class="container">
+            <div class="home-left">
+                <h3 class="title-md">Olá! Me chamo</h3>
+                <h2 class="title-lg home-title">Vinícius Koga</h2>
+                <p class="basic-txt">Sou estudante em desenvolvimento web.</p>
+                <a href="#"><button class="btn home-btn">Baixe meu currículo <i class="fa-solid fa-download"></i></button></a>
+            </div>
+        </div>
     </section>
 
+    <!-- CONHECIMENTOS -->
     <section class="conhecimentos" id="conhecimentos">
         <div class="intersectionBar iConhecimentos"></div>
     </section>
 
+    <!-- PROJETOS -->
     <section class="projetos" id="projetos">
         <div class="intersectionBar iProjetos"></div>
     </section>
 
+    <!-- CONTATO -->
     <section class="contato" id="contato">
         <div class="intersectionBar iContato"></div>
     </section>

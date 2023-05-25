@@ -1,5 +1,5 @@
-const arrowBtnRight = document.querySelector('.header .header-btn.right');
-const arrowBtnLeft = document.querySelector('.header .header-btn.left');
+const arrowBtnRight = document.querySelector('.header .arrow-btn.right');
+const arrowBtnLeft = document.querySelector('.header .arrow-btn.left');
 const homeBtn = document.querySelector('.header .homeBtn');
 const conhecimentosBtn = document.querySelector('.header .conhecimentosBtn');
 const projetosBtn = document.querySelector('.header .projetosBtn');
