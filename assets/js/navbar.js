@@ -107,7 +107,7 @@ document.addEventListener('scroll', () => {
         header.classList.add('header-shrink');
         mobileMenu.style.top = '60px';
     }
-    if(window.scrollY < 1) {
+    if(window.scrollY < 1 && mobileMenu.classList.contains('closed')) {
         header.classList.remove('header-shrink');
         mobileMenu.style.top = '80px';
     }
@@ -124,11 +124,15 @@ mobileMenuBtn.addEventListener('click', () => {
 function openMobileMenu() {
     mobileMenu.classList.remove('closed');
     mobileMenuBtn.classList.add('opened');
+    header.classList.add('header-shrink');
+    mobileMenu.style.top = '60px';
 }
 
 function closeMobileMenu() {
     mobileMenu.classList.add('closed');
     mobileMenuBtn.classList.remove('opened');
+    header.classList.remove('header-shrink');
+    mobileMenu.style.top = '80px';
 }
 
 document.addEventListener('click', (e) => {
