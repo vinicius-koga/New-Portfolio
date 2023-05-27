@@ -50,23 +50,13 @@
     <!-- HOME -->
     <section class="home" id="home">
         <div class="intersectionBar iHome"></div>
-        <div class="circles-box topleft">
-            <div class="circle lg"></div>
-            <div class="circle md"></div>
-            <div class="circle sm"></div>
-        </div>
-        <div class="circles-box bottomleft">
-            <div class="circle lg"></div>
-            <div class="circle md"></div>
-            <div class="circle sm"></div>
-        </div>
 
         <div class="container" style="position: relative;">
-            <div class="home-left fadeUp">
-                <h3 class="title-md">Olá! Me chamo</h3>
-                <h2 class="title-lg home-title">Vinícius Koga</h2>
-                <p class="basic-txt home-subtext">Sou desenvolvedor web - front-end.</p>
-                <a href="#"><button class="btn home-btn">Baixe meu currículo <i class="fa-solid fa-download"></i></button></a>
+            <div class="home-left" style="overflow: hidden;">
+                <h3 class="title-md home-subtitle opacity-0">Olá! Me chamo</h3>
+                <h2 class="title-lg home-title opacity-0-noAnimation">Vinícius Koga</h2>
+                <p class="basic-txt home-subtext typeTextAnimation">&nbsp;</p>
+                <a href="#"><button class="btn home-btn opacity-0-noAnimation">Baixe meu currículo <i class="fa-solid fa-download"></i></button></a>
             </div>
 
             <div class="circles-box bottomright lg">
@@ -94,6 +84,21 @@
                     </a>
                 </div>
             </div>
+
+            <div class="circles-box topleft">
+                <div class="circle lg"></div>
+                <div class="circle md"></div>
+                <div class="circle sm"></div>
+            </div>
+            <div class="circles-box bottomleft">
+                <div class="circle lg"></div>
+                <div class="circle md"></div>
+                <div class="circle sm"></div>
+            </div>
+        </div>
+
+        <div class="home-footer">
+            Para mais informações sobre esse website, acesse o <a href="#">repositório no Github.</a>
         </div>
     </section>
 
@@ -113,5 +118,6 @@
     </section>
 
     <script src="./assets/js/navbar.js"></script>
+    <script src="./assets/js/animation.js"></script>
 </body>
 </html>
