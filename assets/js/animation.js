@@ -63,8 +63,6 @@ function iconBarDisappear() {
 
 function typeTextAnimation(el) {
     const text = '// SOU DESENVOLVEDOR WEB - FRONT-END.'
-    const homeSubtextTxt = document.querySelector('#home .home-subtext').innerText;
-    if(homeSubtextTxt.length > 2) return;
     const textArr = text.split('');
     textArr.forEach((letter, index) => {
         setTimeout(() => {
@@ -80,6 +78,7 @@ const homeObserver = new IntersectionObserver(entries => {
             fade(homeSubtitle, 0)
             setTimeout(() => { fade(homeTitle, 1); }, 500);
             setTimeout(() => { fade(homeButton, 2); }, 500);
+            insertText.innerHTML = '&nbsp;';
             setTimeout(() => { typeTextAnimation(insertText); }, 1200);
 
             iconBarAppear();
@@ -88,7 +87,7 @@ const homeObserver = new IntersectionObserver(entries => {
             removeFade(homeSubtitle, 0);
             removeFade(homeTitle, 1);
             removeFade(homeButton, 2);
-            insertText.innerHTML = '&nbsp;'
+            insertText.innerHTML = '&nbsp;';
 
             iconBarDisappear();
         }
