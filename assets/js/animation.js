@@ -13,14 +13,17 @@ function fade(element, numb) {
     if(numb === 0) {
         element.classList.add('fadeUp');
         element.classList.remove('opacity-0');
+        element.classList.remove('opacity-0-noAnimation');
     }
     if(numb === 1) {
-        element.classList.add('fadeLeft');
+        element.classList.add('fadeIn');
         element.classList.remove('opacity-0');
+        element.classList.remove('opacity-0-noAnimation');
     }
     if(numb === 2) {
         element.classList.add('fadeDown');
         element.classList.remove('opacity-0');
+        element.classList.remove('opacity-0-noAnimation');
     }
 }
 
@@ -62,7 +65,7 @@ function iconBarDisappear() {
 }
 
 function typeTextAnimation(el) {
-    const text = '// SOU DESENVOLVEDOR WEB - FRONT-END.'
+    const text = '<!-- SOU DESENVOLVEDOR WEB - FRONT-END -->'
     const textArr = text.split('');
     textArr.forEach((letter, index) => {
         setTimeout(() => {
@@ -76,7 +79,7 @@ const homeObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             fade(homeSubtitle, 0)
-            setTimeout(() => { fade(homeTitle, 1); }, 500);
+            setTimeout(() => { fade(homeTitle, 0); }, 500);
             setTimeout(() => { fade(homeButton, 2); }, 500);
             insertText.innerHTML = '&nbsp;';
             setTimeout(() => { typeTextAnimation(insertText); }, 1200);
@@ -85,7 +88,7 @@ const homeObserver = new IntersectionObserver(entries => {
         }
         if (!entry.isIntersecting) {
             removeFade(homeSubtitle, 0);
-            removeFade(homeTitle, 1);
+            removeFade(homeTitle, 0);
             removeFade(homeButton, 2);
             insertText.innerHTML = '&nbsp;';
 
