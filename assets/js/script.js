@@ -4,7 +4,7 @@ function resizeCBox() {
     const cBoxLgWidth = cBoxLg.offsetWidth;
     if(window.innerWidth < 993) {
         cBoxLg.style.height = `${cBoxLgWidth}px`;
-        cBoxLg.style.bottom = `-${cBoxLgWidth - 150}px`;
+        cBoxLg.style.bottom = `-${cBoxLgWidth - 170}px`;
     }
     if(window.innerWidth > 992) {
         cBoxLg.style.height = null
