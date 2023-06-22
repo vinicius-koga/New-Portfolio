@@ -8,6 +8,18 @@ const iconBarTwo = document.querySelector('#home .icon-bar.two');
 const iconBarThree = document.querySelector('#home .icon-bar.three');
 const iconBarFour = document.querySelector('#home .icon-bar.four');
 
+//ANIMATIONS
+function iconBarAppear() {
+    iconBarOne.classList.add('iconBarOne');
+    iconBarTwo.classList.add('iconBarTwo');
+    iconBarThree.classList.add('iconBarThree');
+    iconBarFour.classList.add('iconBarFour');
+    iconBarOne.classList.remove('opacity-0');
+    iconBarTwo.classList.remove('opacity-0');
+    iconBarThree.classList.remove('opacity-0');
+    iconBarFour.classList.remove('opacity-0');
+}
+
 // 0 = fadeUp // 1 = fadeIn // 2 = fadeDown
 function fade(element, numb) {
     if(numb === 0) {
@@ -42,17 +54,6 @@ function removeFade(element, numb) {
     }
 }
 
-function iconBarAppear() {
-    iconBarOne.classList.add('iconBarOne');
-    iconBarTwo.classList.add('iconBarTwo');
-    iconBarThree.classList.add('iconBarThree');
-    iconBarFour.classList.add('iconBarFour');
-    iconBarOne.classList.remove('opacity-0');
-    iconBarTwo.classList.remove('opacity-0');
-    iconBarThree.classList.remove('opacity-0');
-    iconBarFour.classList.remove('opacity-0');
-}
-
 function iconBarDisappear() {
     iconBarOne.classList.remove('iconBarOne');
     iconBarTwo.classList.remove('iconBarTwo');
@@ -64,8 +65,9 @@ function iconBarDisappear() {
     iconBarFour.classList.add('opacity-0');
 }
 
-function typeTextAnimation(el) {
-    const text = '<!-- SOU DESENVOLVEDOR WEB - FRONT-END -->'
+function typeTextAnimation(el, txt) {
+    if(el.innerText.length > 2) return;
+    const text = txt
     const textArr = text.split('');
     textArr.forEach((letter, index) => {
         setTimeout(() => {
@@ -73,7 +75,9 @@ function typeTextAnimation(el) {
         }, 60 * index);
     })
 }
-const insertText = document.querySelector('.typeTextAnimation');
+
+//HOME PAGE ANIMATIONS
+const insertText = document.querySelector('.home-subtext');
 
 const homeObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -81,8 +85,7 @@ const homeObserver = new IntersectionObserver(entries => {
             fade(homeSubtitle, 0)
             setTimeout(() => { fade(homeTitle, 0); }, 500);
             setTimeout(() => { fade(homeButton, 2); }, 500);
-            insertText.innerHTML = '&nbsp;';
-            setTimeout(() => { typeTextAnimation(insertText); }, 1200);
+            setTimeout(() => { typeTextAnimation(insertText, '<!-- SOU DESENVOLVEDOR WEB - FRONT-END -->'); }, 1200);
 
             iconBarAppear();
         }
@@ -90,10 +93,21 @@ const homeObserver = new IntersectionObserver(entries => {
             removeFade(homeSubtitle, 0);
             removeFade(homeTitle, 0);
             removeFade(homeButton, 2);
-            insertText.innerHTML = '&nbsp;';
 
             iconBarDisappear();
         }
     })
 })
 homeObserver.observe(document.querySelector('.home-footer'));
+
+
+//SECTION SKILLS ANIMATIONS
+const secSkillsTag = document.querySelector('.conhecimentos .section-tag');
+const secSkillsTagObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            setTimeout(() => { typeTextAnimation(secSkillsTag, '/* MINHAS HABILIDADES */'); }, 1200);
+        };
+    });
+});
+secSkillsTagObserver.observe(secSkillsTag);
