@@ -1,4 +1,5 @@
 const cBoxLg = document.querySelector('.circles-box.bottomright.lg');
+var timeOutFunctionId;
 
 //RESET PAGE WHEN WINDOW IS RESIZED
 function resizeListener() {
@@ -28,8 +29,6 @@ function resizeCBox() {
    }
 }
 
-var timeOutFunctionId;
-
 function workAfterResizeIsDone() {
    body.style.transition = '1s ease';
 }
@@ -43,4 +42,5 @@ window.addEventListener('resize', function(e) {
 
 document.addEventListener('DOMContentLoaded', () => {
    resizeCBox();
+   body.style.transition = '1s ease';
 })
