@@ -106,7 +106,7 @@ const secSkillsTag = document.querySelector('.conhecimentos .section-tag');
 const secSkillsTagObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            setTimeout(() => { typeTextAnimation(secSkillsTag, '/* HABILIDADES */'); }, 1200);
+            setTimeout(() => { typeTextAnimation(secSkillsTag, '/* CONHECIMENTOS */'); }, 1200);
         };
     });
 });
@@ -115,11 +115,11 @@ secSkillsTagObserver.observe(secSkillsTag);
 const skillPercentageObserver = new IntersectionObserver(entries => {
    entries.forEach(entry => {
        if (entry.isIntersecting) {
-         let percentageArr = {htmlcss: 100, javascript: 90, bootstrap: 80, sass: 80, wordpress: 60, git: 90, react: 20, typescript: 20, mysql: 5};
+         let percentageObj = {htmlcss: 100, javascript: 90, bootstrap: 80, sass: 80, wordpress: 60, git: 90, react: 30, typescript: 30, mysql: 5};
 
          document.querySelectorAll('.skill-item-bar-inner').forEach(item => {
             let itemId = item.id;
-            item.style.width = `${percentageArr[itemId]}%`
+            item.style.width = `${percentageObj[itemId]}%`
          })
        };
 
