@@ -106,8 +106,29 @@ const secSkillsTag = document.querySelector('.conhecimentos .section-tag');
 const secSkillsTagObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            setTimeout(() => { typeTextAnimation(secSkillsTag, '/* MINHAS HABILIDADES */'); }, 1200);
+            setTimeout(() => { typeTextAnimation(secSkillsTag, '/* HABILIDADES */'); }, 1200);
         };
     });
 });
 secSkillsTagObserver.observe(secSkillsTag);
+
+const skillPercentageObserver = new IntersectionObserver(entries => {
+   entries.forEach(entry => {
+       if (entry.isIntersecting) {
+         let percentageArr = {htmlcss: 100, javascript: 90, bootstrap: 100, sass: 90, wordpress: 60, git: 90, react: 20, typescript: 20, mysql: 5};
+
+         document.querySelectorAll('.skill-item-bar-inner').forEach(item => {
+            let itemId = item.id;
+            item.style.width = `${percentageArr[itemId]}%`
+         })
+       };
+
+       if(!entry.isIntersecting) {
+         document.querySelectorAll('.skill-item-bar-inner').forEach(item => {
+            item.style.width = `0`
+         })
+       }
+   });
+});
+
+skillPercentageObserver.observe(document.querySelector('.skills-container .col.right'));
