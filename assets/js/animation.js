@@ -115,7 +115,7 @@ secSkillsTagObserver.observe(secSkillsTag);
 const skillPercentageObserver = new IntersectionObserver(entries => {
    entries.forEach(entry => {
        if (entry.isIntersecting) {
-         let percentageObj = {htmlcss: 100, javascript: 90, bootstrap: 80, sass: 80, wordpress: 60, git: 90, react: 30, typescript: 30, mysql: 5};
+         let percentageObj = {htmlcss: 100, javascript: 90, bootstrap: 80, sass: 80, wordpress: 40, git: 90, react: 40, typescript: 30, mysql: 5};
 
          document.querySelectorAll('.skill-item-bar-inner').forEach(item => {
             let itemId = item.id;
